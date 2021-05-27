@@ -38,10 +38,10 @@ def show_client(addr,client_socket):
 				frame = pickle.loads(frame_data)
 				# text  =  f"CLIENT: {addr}"
 				# frame =  ps.putBText(frame,text,10,10,vspace=10,hspace=1,font_scale=0.7, 						background_RGB=(255,0,0),text_RGB=(255,250,250))
-				cv2.imshow(f"FROM {addr}",frame)
-				key = cv2.waitKey(1) & 0xFF
-				if key  == ord('q'):
-					break
+				# cv2.imshow(f"FROM {addr}",frame)
+				# key = cv2.waitKey(1) & 0xFF
+				# if key  == ord('q'):
+				# 	break
 			client_socket.close()
 	except Exception as e:
 		print(f"CLINET {addr} DISCONNECTED")
